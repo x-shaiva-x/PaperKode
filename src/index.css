@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Syne:wght@400..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Syne", sans-serif;
+  --color-background: #0a0a0f;
+  --color-accent: #6c63ff;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-white font-sans;
+    scroll-behavior: smooth;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+.glow-button {
+  @apply relative overflow-hidden transition-all duration-300;
+  box-shadow: 0 0 20px rgba(108, 99, 255, 0.2);
+}
+
+.glow-button:hover {
+  box-shadow: 0 0 30px rgba(108, 99, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.glass-card {
+  @apply bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}

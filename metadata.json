@@ -1,0 +1,5 @@
+{
+  "name": "PaperKode",
+  "description": "AI-powered CBSE paper analyzer for Classes 9-12. Get topic frequency, exam predictions, and custom study plans.",
+  "requestFramePermissions": []
+}
